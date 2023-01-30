@@ -1,0 +1,166 @@
+/* start global rules */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar:hover {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--bgcolor2);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--logo);
+  opacity: 0.7;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text2);
+  width: 50px;
+  opacity: 1;
+}
+
+:root {
+  --rad: 20px;
+  --maincolor: hsl(26, 100%, 55%);
+  --seccolor: hsl(25, 100%, 94%);
+  --dark-blue: hsl(220, 13%, 13%);
+  --grey: hsl(219, 9%, 45%);
+  --Grayish-blue: hsl(220, 14%, 75%);
+  --Light-grayish-blue: hsl(223, 64%, 98%);
+  --Black: hsla(0, 0%, 0%, 0.75);
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  min-height: 100vh;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  color: var(--grey);
+}
+/* end global rules */
+
+/* start my framework */
+
+.scale:hover {
+  transform: scale(1.05);
+}
+
+.mob {
+  display: none;
+}
+
+.shad {
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 25%);
+}
+
+.my-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.br {
+  border-radius: var(--rad);
+}
+
+.point {
+  cursor: pointer;
+}
+
+.grey {
+  color: var(--grey);
+}
+
+.g-blue {
+  color: var(--Grayish-blue);
+}
+
+/* end my framework */
+
+li {
+  cursor: pointer;
+  position: relative;
+}
+
+li:hover {
+  color: black;
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  bottom: -24px;
+  left: 0;
+  background-color: var(--maincolor);
+  transition: 0.3s;
+}
+
+li:hover::after {
+  width: 100%;
+}
+
+img {
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 14px;
+  font-weight: 400;
+  background-color: var(--up);
+  width: 100%;
+  text-align: center;
+  color: var(--text-color);
+  padding: 0.4em;
+  margin-top: auto;
+}
+
+.attribution a {
+  text-decoration: underline;
+}
+
+.attribution a:hover {
+  color: rgb(84, 166, 233);
+}
