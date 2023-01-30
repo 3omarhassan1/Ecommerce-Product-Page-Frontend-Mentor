@@ -35,7 +35,7 @@
 }
 
 :root {
-  --rad: 20px;
+  --rad: 16px;
   --maincolor: hsl(26, 100%, 55%);
   --seccolor: hsl(25, 100%, 94%);
   --dark-blue: hsl(220, 13%, 13%);
@@ -47,7 +47,7 @@
 
 body {
   font-family: "Kumbh Sans", sans-serif;
-  min-height: 100vh;
+  min-height: calc(100vh + 200px);
   position: relative;
 }
 
@@ -77,6 +77,10 @@ ul {
 p {
   color: var(--grey);
 }
+
+h1 {
+  font-size: 3rem;
+}
 /* end global rules */
 
 /* start my framework */
@@ -90,7 +94,7 @@ p {
 }
 
 .shad {
-  box-shadow: 0 0 10px 0 rgb(0 0 0 / 25%);
+  box-shadow: 0 10px 10px 0 hwb(26 10% 0% / 0.3);
 }
 
 .my-flex {
@@ -100,7 +104,11 @@ p {
   align-items: center;
 }
 
-.br {
+i {
+  cursor: pointer;
+}
+
+.rad {
   border-radius: var(--rad);
 }
 
@@ -114,6 +122,22 @@ p {
 
 .g-blue {
   color: var(--Grayish-blue);
+}
+
+.w400 {
+  font-weight: 400;
+}
+
+.w700 {
+  font-weight: 700;
+}
+
+span {
+  color: var(--maincolor);
+}
+
+.maincol {
+  color: var(--maincolor);
 }
 
 /* end my framework */
@@ -142,7 +166,56 @@ li:hover::after {
   width: 100%;
 }
 
+.main {
+  gap: 8rem;
+}
+
+.imgs {
+  width: 100%;
+}
+
 img {
+  cursor: pointer;
+  position: relative;
+}
+
+.otherimgs .img {
+  width: 20%;
+}
+
+.active {
+  border: 2px solid var(--maincolor);
+}
+
+.active img {
+  opacity: 0.5;
+}
+
+img.active::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  background-color: aqua;
+}
+
+.disc {
+  font-size: 1rem;
+  background-color: var(--seccolor);
+  padding: 0.2em 0.5em;
+  border-radius: 0.5rem;
+}
+
+.count {
+  background-color: var(--Light-grayish-blue);
+}
+
+.addcont {
+  color: white;
+  background-color: var(--maincolor);
+  padding: 1rem;
   cursor: pointer;
 }
 

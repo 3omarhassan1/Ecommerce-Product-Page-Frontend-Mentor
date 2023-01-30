@@ -60,47 +60,73 @@
         <hr class="m-0" />
       </div>
     </header>
-    <div class="container d-flex">
-      <div class="imgs">
-        <img src="images/image-product-1.jpg" alt="" />
-        <div class="otherimgs">
-          <img src="images/image-product-1-thumbnail.jpg" alt="" />
-          <img src="images/image-product-2-thumbnail.jpg" alt="" />
-          <img src="images/image-product-3-thumbnail.jpg" alt="" />
-          <img src="images/image-product-4-thumbnail.jpg" alt="" />
+    <div class="container d-flex align-items-center main">
+      <div class="imgs ps-5">
+        <div class="img">
+          <img src="images/image-product-1.jpg" alt="" class="rad" />
+        </div>
+        <div class="otherimgs d-flex justify-content-between mt-4">
+          <div class="img rad overflow-hidden active">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt=""
+              class="thumb"
+            />
+          </div>
+          <div class="img rad overflow-hidden">
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt=""
+              class="thumb"
+            />
+          </div>
+          <div class="img rad overflow-hidden">
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+              alt=""
+              class="thumb"
+            />
+          </div>
+          <div class="img rad overflow-hidden">
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt=""
+              class="thumb"
+            />
+          </div>
         </div>
       </div>
-      <div class="text">
-        <span>SNEAKER COMPANY</span>
-        <h1 class="fw-bold">Fall Limited Edition Sneakers</h1>
+      <div class="text pe-5">
+        <span class="w700">SNEAKER COMPANY</span>
+        <h1 class="w700">Fall Limited Edition Sneakers</h1>
         <p>
           These low-profile sneakers are your perfect casual wear companion.
           Featuring a durable rubber outer sole, they’ll withstand everything
           the weather can offer.
         </p>
-        <h2>$125.00 <span class="disc"></span></h2>
-        <h4 class="g-blue"></h4>
-        <div class="control">
-          <div class="count">
-            <i class="fa-solid fa-minus"></i>
-            <span class="num ps-3 pe-3">0</span>
-            <i class="fa-solid fa-plus"></i>
+        <h2 class="w700 d-flex align-items-center">
+          $125.00 <span class="disc w700 ms-3">50%</span>
+        </h2>
+        <h4 class="g-blue fs-6 w700 text-decoration-line-through">$250.00</h4>
+        <div class="control d-flex gap-3 mt-4 align-items-center w-100">
+          <div class="count d-flex gap-3 p-3 rad align-items-center">
+            <i class="fa-solid fa-minus maincol"></i>
+            <p class="num ps-3 pe-3 m-0 w700 text-black">0</p>
+            <i class="fa-solid fa-plus maincol"></i>
           </div>
-          <div class="add">
-            <i class="fa-solid fa-cart-shopping"></i>
-            Add to cart
+          <div
+            class="addcont flex-grow-1 d-flex rad shad justify-content-center"
+          >
+            <div class="d-flex gap-3 align-items-center w700">
+              <i class="fa-solid fa-cart-shopping"></i>
+              Add to cart
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <hr class="mt-5" />
-    Collections Men Women About Contact Sneaker Company Fall Limited Edition
-    Sneakers These low-profile sneakers are your perfect casual wear companion.
-    Featuring a durable rubber outer sole, they’ll withstand everything the
-    weather can offer. $125.00 50% $250.00 0 Add to cart
-
-    <div class="attribution">
+    <div class="attribution position-absolute bottom-0 mt-4 pt-5">
       Challenge by
       <a
         class="front"
