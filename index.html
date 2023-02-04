@@ -54,40 +54,57 @@
             />
           </svg>
         </div>
+
+        <div class="cartcont">
+          <h3>cart</h3>
+          <hr />
+        </div>
         <img src="images/image-avatar.png" alt="" width="70" />
       </div>
       <div class="container">
         <hr class="m-0" />
       </div>
     </header>
-    <div class="container d-flex align-items-center main">
+    <div class="container d-flex align-items-center main pb-5">
       <div class="imgs ps-5">
         <div class="img">
           <img src="images/image-product-1.jpg" alt="" class="rad" />
         </div>
         <div class="otherimgs d-flex justify-content-between mt-4">
-          <div class="img rad overflow-hidden active">
+          <div
+            onclick="openOverlay();currentSlide(0)"
+            class="img rad overflow-hidden active"
+          >
             <img
               src="images/image-product-1-thumbnail.jpg"
               alt=""
               class="thumb"
             />
           </div>
-          <div class="img rad overflow-hidden">
+          <div
+            onclick="openOverlay();currentSlide(1)"
+            class="img rad overflow-hidden"
+          >
             <img
               src="images/image-product-2-thumbnail.jpg"
               alt=""
               class="thumb"
             />
           </div>
-          <div class="img rad overflow-hidden">
+          <div
+            onclick="openOverlay();currentSlide(2)"
+            class="img rad overflow-hidden"
+          >
             <img
               src="images/image-product-3-thumbnail.jpg"
               alt=""
               class="thumb"
             />
           </div>
-          <div class="img rad overflow-hidden">
+          <div
+            onclick="openOverlay();currentSlide(3)"
+            class="img rad overflow-hidden"
+          >
             <img
               src="images/image-product-4-thumbnail.jpg"
               alt=""
@@ -110,12 +127,12 @@
         <h4 class="g-blue fs-6 w700 text-decoration-line-through">$250.00</h4>
         <div class="control d-flex gap-3 mt-4 align-items-center w-100">
           <div class="count d-flex gap-3 p-3 rad align-items-center">
-            <i class="fa-solid fa-minus maincol"></i>
+            <i class="fa-solid fa-minus maincol op50"></i>
             <p class="num ps-3 pe-3 m-0 w700 text-black">0</p>
-            <i class="fa-solid fa-plus maincol"></i>
+            <i class="fa-solid fa-plus maincol op50"></i>
           </div>
           <div
-            class="addcont flex-grow-1 d-flex rad shad justify-content-center"
+            class="addcont flex-grow-1 d-flex rad shad justify-content-center op50"
           >
             <div class="d-flex gap-3 align-items-center w700">
               <i class="fa-solid fa-cart-shopping"></i>
@@ -126,7 +143,62 @@
       </div>
     </div>
 
-    <div class="attribution position-absolute bottom-0 mt-4 pt-5">
+    <div class="overlay">
+      <div class="overlay-cont">
+        <span class="close">
+          <i class="fa fa-x fa-2x" onclick="close()"></i>
+        </span>
+        <div class="slides">
+          <i class="back fa fa-angle-left fa-2x" onclick="changeSlide(-1)"></i>
+          <div class="slide">
+            <img src="images/image-product-1.jpg" alt="" class="rad" />
+          </div>
+          <div class="slide">
+            <img src="images/image-product-2.jpg" alt="" class="rad" />
+          </div>
+          <div class="slide">
+            <img src="images/image-product-3.jpg" alt="" class="rad" />
+          </div>
+          <div class="slide">
+            <img src="images/image-product-4.jpg" alt="" class="rad" />
+          </div>
+          <i class="next fa fa-angle-right fa-2x" onclick="changeSlide(1)"></i>
+        </div>
+
+        <div class="otherimgs d-flex justify-content-between">
+          <div onclick="currentSlide(0)" class="img rad overflow-hidden">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt=""
+              class="thumbin"
+            />
+          </div>
+          <div onclick="currentSlide(1)" class="img rad overflow-hidden">
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt=""
+              class="thumbin"
+            />
+          </div>
+          <div onclick="currentSlide(2)" class="img rad overflow-hidden">
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+              alt=""
+              class="thumbin"
+            />
+          </div>
+          <div onclick="currentSlide(3)" class="img rad overflow-hidden">
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt=""
+              class="thumbin"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
       Challenge by
       <a
         class="front"

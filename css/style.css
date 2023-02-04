@@ -9,34 +9,34 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar:hover {
-  width: 20px;
+  width: 5px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--bgcolor2);
+  background: var(--seccolor);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--logo);
-  opacity: 0.7;
+  background: var(--maincolor-faded);
+  opacity: 0.5;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--text2);
-  width: 50px;
+  background-color: var(--maincolor);
   opacity: 1;
 }
 
 :root {
   --rad: 16px;
   --maincolor: hsl(26, 100%, 55%);
+  --maincolor-faded: hsla(26, 100%, 55%, 0.4);
   --seccolor: hsl(25, 100%, 94%);
   --dark-blue: hsl(220, 13%, 13%);
   --grey: hsl(219, 9%, 45%);
@@ -47,7 +47,7 @@
 
 body {
   font-family: "Kumbh Sans", sans-serif;
-  min-height: calc(100vh + 200px);
+  min-height: 100vh;
   position: relative;
 }
 
@@ -140,18 +140,21 @@ span {
   color: var(--maincolor);
 }
 
+.op50:hover {
+  opacity: 0.5;
+}
 /* end my framework */
 
-li {
+header li {
   cursor: pointer;
   position: relative;
 }
 
-li:hover {
+header li:hover {
   color: black;
 }
 
-li::after {
+header li::after {
   content: "";
   position: absolute;
   width: 0;
@@ -162,8 +165,13 @@ li::after {
   transition: 0.3s;
 }
 
-li:hover::after {
+header li:hover::after {
   width: 100%;
+}
+
+header img {
+  border: 2px solid var(--maincolor);
+  border-radius: 50%;
 }
 
 .main {
@@ -174,21 +182,48 @@ li:hover::after {
   width: 100%;
 }
 
-img {
+.thumb {
   cursor: pointer;
   position: relative;
 }
 
 .otherimgs .img {
   width: 20%;
+  position: relative;
+  cursor: pointer;
+}
+
+.img img {
+  width: 100%;
+}
+
+.otherimgs .img:hover::before {
+  /* opacity: 0.5; */
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  opacity: 0.5;
+  z-index: 1;
 }
 
 .active {
   border: 2px solid var(--maincolor);
 }
 
-.active img {
+.active::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
   opacity: 0.5;
+  z-index: 1;
 }
 
 img.active::after {
@@ -219,15 +254,80 @@ img.active::after {
   cursor: pointer;
 }
 
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-cont {
+  width: 90%;
+  margin: auto;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.close {
+  align-self: flex-end;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.slides {
+  position: relative;
+  margin-bottom: 1.7rem;
+}
+
+.slide {
+  display: none;
+}
+
+.back,
+.next {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--seccolor);
+  color: black;
+  border-radius: 50%;
+  border: 1px solid var(--grey);
+}
+
+.next {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.back::before,
+.next::before {
+  top: 50%;
+  position: absolute;
+  transform: translate(100%, -50%);
+}
+
 .attribution {
+  position: absolute;
+  bottom: 0;
   font-size: 14px;
   font-weight: 400;
   background-color: var(--up);
   width: 100%;
   text-align: center;
-  color: var(--text-color);
+  color: white;
   padding: 0.4em;
   margin-top: auto;
+  background-color: var(--maincolor);
 }
 
 .attribution a {
